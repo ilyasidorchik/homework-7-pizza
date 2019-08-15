@@ -42,7 +42,7 @@ export default (state = [], action) => {
         if (pizza.position === from && !flag) {
           flag = true;
 
-          if (pizza.recipe.indexOf(ingredient) !== -1 && pizza.ingredients.indexOf(ingredient) < 0) {
+          if (pizza.recipe.indexOf(ingredient) !== -1 && pizza.ingredients.indexOf(ingredient) === -1) {
             return {
               ...pizza,
               ingredients: [...pizza.ingredients, ingredient]
